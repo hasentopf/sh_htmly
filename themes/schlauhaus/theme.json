@@ -1,0 +1,9 @@
+{
+  "name": "Schlauhaus",
+  "version": "1.0",
+  "author": "Mathias von Heckel",
+  "homepage": "https://www.persicope.de",
+  "description": "Schlauhaus theme based on Casper theme by Ghost.org ported to HTMLy.",
+  "settings": [
+  ]
+}

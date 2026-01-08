@@ -4087,9 +4087,9 @@ function generate_meta($type = null, $object = null)
         $tags .= '<meta property="og:type" content="website" />' . "\n";
         $tags .= '<meta property="og:site_name" content="'. blog_title() . '" />' . "\n";
         $tags .= '<meta property="og:image" content="'. $defaultImg .'" />' . "\n";
-        $tags .= '<meta name="twitter:card" content="summary_large_image" />' . "\n";
         if(!empty($twitter)) {
             $twitter = parse_url($twitter);
+            $tags .= '<meta name="twitter:card" content="summary_large_image" />' . "\n";
             $tags .= '<meta name="twitter:site" content="'. str_replace('/', '@', $twitter['path']) .'" />' . "\n";
         }
         if (!empty($fbApp)) {
