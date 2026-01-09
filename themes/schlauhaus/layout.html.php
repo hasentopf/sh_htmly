@@ -11,9 +11,6 @@
 <?php if (login()) { toolbar(); } ?>
 	<div class="site-wrapper">
 		<header class="site-home-header">
-		<?php if (empty(theme_config('casper_header'))):?>
-		<style>.responsive-header-img {background-image: url(<?php echo theme_path();?>images/publication-cover.jpg);}</style>
-		<?php endif; ?>
             <div class="outer site-header-background responsive-header-img">
 <?php } elseif (isset($is_post) || isset($is_page) || isset($is_subpage) || isset($is_404) || isset($is_404search)) {?>
 <body class="post-template">
@@ -152,22 +149,20 @@
 				<div class="read-next-feed">
 					<?php $recent = recent_posts(true);?>
 					<article class="read-next-card">
-						<header class="read-next-card-header">
-							<h3><?php echo i18n('Recent_posts');?></h3>
-						</header>
+                        <h3><?php echo i18n('Recent_posts');?></h3>
 						<div class="read-next-card-content">
 							<ul>
 							<?php foreach ($recent as $r): ?>
-							<li style="padding-bottom:0;">
-                                <h4><a href="<?php echo $r->url;?>"><?php echo $r->title;?></a></h4>
-                                <div class="read-next-card-meta">
-                                    <p><time><?php echo format_date($r->date) ?></time></p>
-                                </div>
-                            </li>
+                                <li>
+                                    <h4><a href="<?php echo $r->url;?>"><?php echo $r->title;?></a></h4>
+                                    <div class="read-next-card-meta">
+                                        <time><?php echo format_date($r->date) ?></time>
+                                    </div>
+                                </li>
 							<?php endforeach;?>
 							</ul>
 						</div>
-						<footer class="read-next-card-footer" style="margin-bottom:25px;">
+						<footer class="read-next-card-footer">
 							<?php echo i18n('All_blog_posts');?>: <?php echo $p->category;?>
 						</footer>
 					</article>

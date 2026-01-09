@@ -24,4 +24,4 @@
             <span class="newer" style="padding-left:30px;"><a href="<?php echo($prev['url']); ?>" rel="prev"><?php echo($prev['title']); ?> &#8594;</a></span>
         <?php endif;?>
     </div>
-<?php endif; ?>	
+<?php endif; ?>

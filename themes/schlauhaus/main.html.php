@@ -44,9 +44,6 @@
 	</div>
 </article>
 <?php endforeach; ?>
-<style>
-.pager {position: relative;text-align: center;width:100%;padding:20px;}
-</style>
 <?php if (!empty($pagination['prev']) || !empty($pagination['next'])): ?>
     <div class="pager">
         <?php if (!empty($pagination['prev'])) { ?>

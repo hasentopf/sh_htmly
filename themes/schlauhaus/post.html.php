@@ -48,32 +48,6 @@ $direction = (preg_match('/\p{Arabic}/u', $p->body) || config('lang') === 'ar') 
             <?php } ?>
             <?php echo $p->body; ?>
         </div>
-        <style>
-            .related-posts { font-size: 1.7rem; }
-            .related-posts li { margin: 5px; }
-            .tag a::after { content: ','; } 
-            .tag a:last-child::after { content: ''; }
-            .post-full-content.rtl, .post-full-content[dir="rtl"] { direction: rtl; text-align: right; }
-            .post-full-content.ltr, .post-full-content[dir="ltr"] { direction: ltr; text-align: left; }
-
-            /* Adjust styles for RTL layout */
-            <?php if ($direction == 'rtl') : ?>
-            .post-full-byline-content {
-                text-align: right;
-            }
-            .author-avatar {
-                float: right;
-                margin-left: 15px;
-                margin-right: 0;
-            }
-            .post-full-byline-meta {
-                text-align: right;
-            }
-            .byline-meta-content {
-                text-align: right;
-            }
-            <?php endif; ?>
-        </style>
         <div class="tag read-next-card-content"><?php echo i18n('Tags'); ?>: <?php echo $p->tag; ?></div>
         
         <?php if (disqus()) : ?>

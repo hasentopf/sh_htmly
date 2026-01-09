@@ -1,6 +1,7 @@
 /cache/*
 /content/*
 /config/config.ini
+/config/config.prod.ini
 /config/users/*.ini
 /backup
 /.htaccess
