@@ -11,7 +11,7 @@
 	<div class="site-wrapper">
 <?php if (login()) { toolbar(); } ?>
 		<header class="site-home-header">
-            <div class="outer site-header-background responsive-header-img">
+            <div class="outer site-header-background">
 <?php } elseif (isset($is_post) || isset($is_page) || isset($is_subpage) || isset($is_404) || isset($is_404search)) {?>
 <body class="post-template">
     <div class="site-wrapper">
@@ -29,7 +29,7 @@
 					<nav class="site-nav">
 						<div class="site-nav-left-wrapper">
 							<div class="site-nav-left">
-								<a class="site-nav-logo" href="<?php echo site_url();?>"><img src="<?php echo theme_path();?>images/avatar.svg" alt="<?php echo blog_title();?>"></a>
+								<a class="site-nav-logo" href="<?php echo site_url();?>"><img src="<?php echo theme_path();?>images/avatar.svg" alt="<?php echo blog_title();?> Logo Avatar"></a>
 								<div class="site-nav-content">
 									<?php echo menu();?>
 								</div>
@@ -43,7 +43,10 @@
 					</nav>
 					<?php if (isset($is_front)):?>
 					<div class="site-header-content">
-						<h1 class="site-title"><?php echo blog_title();?></h1>
+						<h1 class="site-title">
+                            <img class="site-header-logo" src="<?php echo theme_path();?>images/Schlauhaus_logo.svg" alt="Schlauhaus Logo - <?php echo blog_title();?>">
+                            <span class="sr-only"><?php echo blog_title();?></span>
+                        </h1>
 						<h2 class="site-description"><?php echo blog_tagline();?></h2>
 					</div>
 					<?php endif;?>
