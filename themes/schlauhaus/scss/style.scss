@@ -1308,6 +1308,7 @@ ul.nav {
     .read-next-card-content {
       background-color: $white;
       border-radius: 10px;
+      padding-bottom: 10px;
     }
   }
 
@@ -1318,7 +1319,6 @@ ul.nav {
     letter-spacing: 0.2px;
     text-transform: uppercase;
     color: $darkblue;
-    padding-bottom: 20px;
   }
 
   &-card-footer a {

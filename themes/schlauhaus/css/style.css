@@ -1149,6 +1149,7 @@ ul.nav li {
 .read-next-feed .read-next-card-content {
   background-color: #ffffff;
   border-radius: 10px;
+  padding-bottom: 10px;
 }
 .read-next-card-meta {
   font-size: 1.3rem;
@@ -1157,7 +1158,6 @@ ul.nav li {
   letter-spacing: 0.2px;
   text-transform: uppercase;
   color: rgb(20, 28, 95);
-  padding-bottom: 20px;
 }
 .read-next-card-footer a {
   color: rgb(20, 28, 95);
