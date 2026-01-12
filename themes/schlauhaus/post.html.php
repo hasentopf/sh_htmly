@@ -54,7 +54,7 @@ $direction = (preg_match('/\p{Arabic}/u', $p->body) || config('lang') === 'ar') 
             <?php echo disqus($p->title, $p->url); ?>
         <?php endif; ?>
         <?php if (facebook() || disqus()) : ?>
-        <div class="comments-area" id="comments" style="margin-top:30px;">
+        <div class="comments-area" id="comments">
             <?php if (facebook()) : ?>
                 <div class="fb-comments" data-href="<?php echo $p->url; ?>" data-numposts="<?php echo config('fb.num'); ?>" data-colorscheme="<?php echo config('fb.color'); ?>"></div>
             <?php endif; ?>

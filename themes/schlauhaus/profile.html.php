@@ -49,15 +49,15 @@
 <?php if (!empty($pagination['prev']) || !empty($pagination['next'])): ?>
     <div class="pager">
         <?php if (!empty($pagination['prev'])) { ?>
-            <span class="newer" style="padding-right:30px;"><a href="?page=<?php echo $page - 1 ?>" rel="prev">&#8592; <?php echo i18n('Newer');?></a></span>
+            <span class="newer"><a href="?page=<?php echo $page - 1 ?>" rel="prev">&#8592; <?php echo i18n('Newer');?></a></span>
         <?php } else { ?>
-		<span class="newer" style="padding-right:30px;">&#8592; <?php echo i18n('Newer');?></span>
+		<span class="newer">&#8592; <?php echo i18n('Newer');?></span>
 		<?php } ?>
-        <span class="page-number read-next-card-meta" style="text-align:center;display:inline-block;"><?php echo $pagination['pagenum'];?></span>
+        <span class="page-number read-next-card-meta"><?php echo $pagination['pagenum'];?></span>
         <?php if (!empty($pagination['next'])) { ?>
-            <span class="older" style="padding-left:30px;"><a href="?page=<?php echo $page + 1 ?>" rel="next"><?php echo i18n('Older');?> &#8594;</a></span>
+            <span class="older"><a href="?page=<?php echo $page + 1 ?>" rel="next"><?php echo i18n('Older');?> &#8594;</a></span>
         <?php } else { ?>
-			<span class="older" style="padding-left:30px;"><?php echo i18n('Older');?> &#8594;</span>
+			<span class="older"><?php echo i18n('Older');?> &#8594;</span>
 		<?php } ?>
     </div>
 <?php endif; ?>

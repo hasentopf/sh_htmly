@@ -8,22 +8,22 @@
 </head>
 <?php if (isset($is_front)) {?>
 <body class="home-template">
-<?php if (login()) { toolbar(); } ?>
 	<div class="site-wrapper">
+<?php if (login()) { toolbar(); } ?>
 		<header class="site-home-header">
             <div class="outer site-header-background responsive-header-img">
 <?php } elseif (isset($is_post) || isset($is_page) || isset($is_subpage) || isset($is_404) || isset($is_404search)) {?>
 <body class="post-template">
+    <div class="site-wrapper">
 <?php if (login()) { toolbar(); } ?>
-	<div class="site-wrapper">
 		<header class="site-header">
-			<div class="outer site-nav-main" <?php if (login()):?>style="position:relative;"<?php endif;?>>
+			<div class="outer site-nav-main<?php if (login()):?> nav-login-relative<?php endif;?>">
 <?php } else {?>
 <body class="tag-template">
+    <div class="site-wrapper">
 <?php if (login()) { toolbar(); } ?>
-	<div class="site-wrapper">
 		<header class="site-archive-header">
-			<div class="outer site-nav-main" <?php if (login()):?>style="position:relative;"<?php endif;?>>		
+            <div class="outer site-nav-main<?php if (login()):?> nav-login-relative<?php endif;?>">
 <?php } ?>
 				<div class="inner">
 					<nav class="site-nav">
@@ -135,7 +135,7 @@
                     <div class="col">
                         <h3>Digitale Souveränität</h3>
                         <p>
-                            Erfahren Sie hier mehr über die Möglichkeiten für Ihr ganz persönliches <a href="<?php echo site_url();?>category/blog" style="text-decoration:underline">Schlauhaus</a>.
+                            Erfahren Sie hier mehr über die Möglichkeiten für Ihr ganz persönliches <a href="<?php echo site_url();?>category/blog" class="link-underline">Schlauhaus</a>.
                         </p>
                     </div>
                 </section>
@@ -180,8 +180,8 @@
 				</nav>
 			</div>
 		</footer>
-	</div>
 <?php if (facebook()) { echo facebook(); } ?>
 <?php if (analytics()): ?><?php echo analytics() ?><?php endif; ?>
+	</div>
 </body>
 </html>

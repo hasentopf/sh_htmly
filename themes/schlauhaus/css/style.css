@@ -692,6 +692,39 @@ ul.nav li {
 }
 
 /* ==========================================================================
+   Utility Classes
+   ========================================================================== */
+.nav-login-relative {
+  position: relative;
+}
+
+.link-underline {
+  text-decoration: underline;
+}
+
+.comments-area {
+  margin-top: 30px;
+}
+
+.pager {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  font-size: 18px;
+}
+.pager .newer {
+  padding-right: 30px;
+}
+.pager .older {
+  padding-left: 30px;
+}
+.pager .page-number {
+  text-align: center;
+  display: inline-block;
+}
+
+/* ==========================================================================
    Footer
    ========================================================================== */
 .site-footer {

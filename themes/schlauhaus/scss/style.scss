@@ -846,6 +846,47 @@ ul.nav {
 }
 
 /* ==========================================================================
+   Utility Classes
+   ========================================================================== */
+
+// Login navigation positioning
+.nav-login-relative {
+  position: relative;
+}
+
+// Link underline for specific links
+.link-underline {
+  text-decoration: underline;
+}
+
+// Comments area spacing
+.comments-area {
+  margin-top: 30px;
+}
+
+// Pagination spacing
+.pager {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  font-size: 18px;
+
+  .newer {
+    padding-right: 30px;
+  }
+
+  .older {
+    padding-left: 30px;
+  }
+
+  .page-number {
+    text-align: center;
+    display: inline-block;
+  }
+}
+
+/* ==========================================================================
    Footer
    ========================================================================== */
 .site-footer {
