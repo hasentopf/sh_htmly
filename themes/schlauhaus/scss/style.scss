@@ -476,6 +476,7 @@ hr {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 // Main content
@@ -671,7 +672,7 @@ hr {
   margin: auto 0;
 }
 
-ul.nav {
+.site-nav ul.nav {
   margin: 0 0 0 -12px;
   padding: 0;
   list-style: none;
@@ -735,6 +736,22 @@ ul.nav {
   }
 }
 
+.site-footer-nav .nav {
+  list-style: none;
+
+  .nav-item {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+
+    &.dropdown {
+      .dropdown-menu {
+        display: none;
+      }
+    }
+  }
+
+}
 
 .site-nav-left {
   flex: 1 0 auto;
