@@ -57,7 +57,7 @@ $zindex-header: 100;
   }
 }
 
-@mixin linkAnimation($color) {
+@mixin linkAnimation($color, $height: 2px) {
   position: relative;
   display: block;
   color: #fff;
@@ -82,7 +82,7 @@ $zindex-header: 100;
     bottom: 8px;
     left: 12px;
     right: 12px;
-    height: 2px;
+    height: $height;
     background-color: $color;
     transform: scaleX(0);
     transform-origin: center;
@@ -650,9 +650,8 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  overflow: hidden;
   height: 70px;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 
   .home-template & {
     height: 50px;
@@ -681,21 +680,73 @@ ul.nav {
     display: inline-block;
     margin: 0;
     padding: 0;
+
+    &.dropdown {
+      position: relative;
+      padding-right: 1em;
+
+      &::after {
+        opacity: .8;
+        position: absolute;
+        content: " ▶";
+        color: $whitegrey;
+        display: inline-block;
+        width: 1em;
+        top: 1.65em;
+        right: 0.5em;
+        font-size: 0.75em;
+      }
+
+      .subnav.dropdown-menu {
+        visibility: hidden;
+        height: 0;
+        position: absolute;
+        margin: -2px 0 0 0;
+        padding: 5px;
+        background-color: $darkblue;
+
+        li {
+          display: block;
+
+          a {
+            font-size: 1.3rem;
+            text-transform: unset;
+            @include linkAnimation($yellow, 1px);
+          }
+        }
+      }
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+
+        .subnav.dropdown-menu {
+          visibility: visible;
+          height: auto;
+        }
+      }
+
+      &:hover::after,
+      &:focus::after {
+        content:" ▼";
+        color: $yellow;
+      }
+    }
   }
 }
+
 
 .site-nav-left {
   flex: 1 0 auto;
   align-items: center;
-  overflow-x: auto;
-  overflow-y: hidden;
+  //overflow-x: auto;
+  //overflow-y: hidden;
 
   display: flex;
   margin-right: 10px;
   padding: 0;
   font-weight: 500;
   letter-spacing: 0.2px;
-  text-transform: uppercase;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
   
@@ -714,6 +765,7 @@ ul.nav {
       
       a {
         padding: 15px;
+        text-transform: uppercase;
         @include linkAnimation($yellow);
       }
     }
@@ -812,9 +864,9 @@ ul.nav {
 
   .social-logo a {
     color: $white;
-    font-size: 20px;
+    font-size: 22px;
     opacity: .8;
-    padding-left: 10px;
+    padding: 5px 0 0 10px;
 
     &:hover {
       opacity: 1;
@@ -1308,7 +1360,6 @@ ul.nav {
     border-radius: 100%;
   }
 
-  
   .post-card-byline-content {
     flex: 1 1 50%;
     display: flex;
