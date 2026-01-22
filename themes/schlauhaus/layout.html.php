@@ -4,7 +4,7 @@
 <head>    
     <?php echo head_contents();?>
     <?php echo $metatags;?>
-    <link rel="stylesheet" type="text/css" href="<?php echo theme_path();?>css/style.css?v=1">
+    <link rel="stylesheet" type="text/css" href="<?php echo theme_path();?>css/style.css">
 </head>
 <?php if (isset($is_front)) {?>
 <body class="home-template">
