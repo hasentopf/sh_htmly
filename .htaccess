@@ -69,10 +69,6 @@ DirectoryIndex index.php
 
   RewriteEngine on
 
-  # Force HTTPS
-  RewriteCond %{HTTPS} off
-  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-  
 # Uncomment the following to redirect all visitors to the https version
 # RewriteCond %{HTTPS} off
 # RewriteRUle (.*) https://www.example.com/$1 [R=301,L]

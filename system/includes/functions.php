@@ -2791,17 +2791,16 @@ function parseNode($node, $child = null)
 }
 
 // Menu
-function menu($class = null)
+function menu($navClass = null, $default = false)
 {
     $filename = "content/data/menu.json";
-    if (file_exists($filename)) {
+    if (file_exists($filename) && !$default) {
         $json = json_decode(file_get_contents('content/data/menu.json', true));
         $nodes = json_decode($json);
         if (empty($nodes)) {
-            return get_menu($class);
+            return get_menu($navClass);
         } else {
-            $html = parseNodes($nodes, null, $class);
-            $output = '';
+            $html = parseNodes($nodes, null, $navClass);
             libxml_use_internal_errors(true);
             $doc = new DOMDocument();
             $doc->loadHTML('<span class="dom-charset"><meta charset="utf8"></span>' . $html);
@@ -2826,7 +2825,7 @@ function menu($class = null)
 
         }
     } else {
-        return get_menu($class);
+        return get_menu($navClass);
     }
 }
 

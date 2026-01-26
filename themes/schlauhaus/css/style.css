@@ -385,14 +385,13 @@ hr + p {
   justify-content: center;
   align-items: center;
   padding: 6vw 3vw;
-  min-height: 200px;
 }
 .site-home-header .site-header-content {
-  padding: 6vw 0 7vw;
+  padding: 5vw 0 6vw;
 }
 .site-archive-header .site-header-content {
   align-items: stretch;
-  padding: 75px 0 2vw;
+  padding: 90px 0 2vw;
   border-bottom: 1px solid rgb(228, 228, 228);
 }
 .site-header-content.author-header {
@@ -732,6 +731,76 @@ hr + p {
 }
 .site-nav-right .subscribe-button {
   margin-left: 24px;
+}
+
+.navbar-nav.is_front {
+  list-style: none;
+  padding: 40px 0;
+  display: flex;
+  background-color: rgb(20, 28, 95);
+  position: relative;
+}
+@media (max-width: 700px) {
+  .navbar-nav.is_front {
+    display: block;
+    padding: 5px 0;
+  }
+}
+.navbar-nav.is_front:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 100vw;
+  transform: translateX(-50%);
+  z-index: -1;
+  box-sizing: border-box;
+  background-color: rgb(20, 28, 95);
+}
+.navbar-nav.is_front .nav-item {
+  margin: 0 20px;
+  padding: 0 20px;
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 700px) {
+  .navbar-nav.is_front .nav-item {
+    margin: 20px;
+    width: auto;
+  }
+}
+.navbar-nav.is_front .nav-item.icon {
+  padding-left: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+}
+.navbar-nav.is_front .nav-item.icon.eAuto {
+  background-image: url("../images/Schlauhaus-E-Auto.svg");
+}
+.navbar-nav.is_front .nav-item.icon.PV {
+  background-image: url("../images/Schlauhaus-Solaranlage.svg");
+}
+.navbar-nav.is_front .nav-item .nav-link {
+  display: block;
+  color: rgb(20, 28, 95);
+  font-size: 22px;
+  line-height: 1.5em;
+  width: 100%;
+}
+.navbar-nav.is_front .nav-item:focus, .navbar-nav.is_front .nav-item:hover {
+  background-color: rgb(125, 88, 246);
+}
+.navbar-nav.is_front .nav-item:focus .nav-link, .navbar-nav.is_front .nav-item:hover .nav-link {
+  text-decoration: none;
+  color: rgb(255, 255, 122);
 }
 
 .social-links {

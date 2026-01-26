@@ -31,7 +31,7 @@
 							<div class="site-nav-left">
 								<a class="site-nav-logo" href="<?php echo site_url();?>"><img src="<?php echo theme_path();?>images/avatar.svg" alt="<?php echo blog_title();?> Logo Avatar"></a>
 								<div class="site-nav-content">
-									<?php echo menu();?>
+                                    <?php echo menu(null, 'default');?>
 								</div>
 							</div>
 						</div>
@@ -179,7 +179,7 @@
 			<div class="site-footer-content inner">
             <section class="copyright">© <?php echo date('Y');?> <?php echo copyright();?></section>
 				<nav class="site-footer-nav">
-					<?php echo menu();?>
+					<?php echo menu(null, 'default');?>
 				</nav>
 			</div>
 		</footer>

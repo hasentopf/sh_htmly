@@ -10,7 +10,11 @@
 		<?php echo $p->body;?>
 		</div>
 	</section>
-
+    <?php if (isset($is_front)):?>
+        <nav>
+            <?php echo menu('is_front');?>
+        </nav>
+    <?php endif;?>
 </article>
 
 <?php if (!empty($prev) || !empty($next)): ?>
