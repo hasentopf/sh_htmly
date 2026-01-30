@@ -515,7 +515,7 @@ hr + p {
 }
 
 .site-nav ul.nav {
-  margin: 0 0 0 -12px;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -696,6 +696,11 @@ hr + p {
   margin-right: 32px;
   color: #ffffff;
 }
+@media (max-width: 700px) {
+  .site-nav-logo {
+    margin-right: 20px;
+  }
+}
 .site-nav-logo img {
   display: block;
   width: auto;
@@ -731,6 +736,16 @@ hr + p {
 }
 .site-nav-right .subscribe-button {
   margin-left: 24px;
+}
+
+@media (max-width: 700px) {
+  .site-nav-content .nav-item .nav-link {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .site-nav-content .nav-item.first {
+    display: none;
+  }
 }
 
 .navbar-nav.is_front {

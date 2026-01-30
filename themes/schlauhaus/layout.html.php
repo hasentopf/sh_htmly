@@ -186,5 +186,6 @@
 <?php if (facebook()) { echo facebook(); } ?>
 <?php if (analytics()): ?><?php echo analytics() ?><?php endif; ?>
 	</div>
+<script src="<?php echo theme_path();?>js/main.js"></script>
 </body>
 </html>

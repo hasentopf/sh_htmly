@@ -673,7 +673,7 @@ hr {
 }
 
 .site-nav ul.nav {
-  margin: 0 0 0 -12px;
+  margin: 0;
   padding: 0;
   list-style: none;
 
@@ -826,6 +826,10 @@ hr {
   margin-right: 32px;
   color: $white;
 
+  @include media-query(tablet) {
+    margin-right: 20px;
+  }
+
   img {
     display: block;
     width: auto;
@@ -866,6 +870,20 @@ hr {
   
   .subscribe-button {
     margin-left: 24px;
+  }
+}
+
+.site-nav-content {
+  @include media-query(tablet) {
+    .nav-item {
+      .nav-link {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+      &.first {
+        display: none;
+      }
+    }
   }
 }
 
