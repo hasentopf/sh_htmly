@@ -114,31 +114,45 @@
                 <?php if (!isset($is_post) && !isset($is_author) && !isset($is_category) && !isset($is_tag) && !isset($is_search) && !isset($is_type)):?>
                 <section class="section-features justify-content-center text-center">
                     <div class="col">
-                        <img src="<?php echo theme_path();?>images/Schlauhaus-Solaranlage.svg" alt="Service- und Vertriebskonzept Schlauhaus-Solaranlage">
-                        <h3>Service- und Vertriebskonzept</h3>
+                        <img src="<?php echo theme_path();?>images/Schlauhaus-Waermepumpe.svg" alt="Herstellerunabhängig" class="img-fluid">
+                        <h3>Hersteller -<br>unabhängig</h3>
                         <p>
-                            Schlauhaus nimmt Installateuren Arbeit ab, wo andere Anbieter sie für mehr Arbeit einspannen wollen.
-                            Und für die Endkunden ist Schlauhaus direkter Ansprechpartner für das individuelle Energiemanagement.
+                            Schlauhaus funktioniert mit Wechselrichtern, Wärmepumpen und Wallboxen von vielen Herstellern. Sie nutzen die besten Geräte Ihrer Wahl - wir steuern sie für Sie.
                         </p>
                     </div>
                     <div class="col">
-                        <img src="<?php echo theme_path();?>images/Schlauhaus-Schlauhaus-Box.svg" alt="Individualisierbarkeit Schlauhaus-Box">
-                        <h3>Individualisierbarkeit</h3>
+                        <img src="<?php echo theme_path();?>images/Schlauhaus-Netzstrom.svg" alt="Stromanbieter Netzstrom" class="img-fluid">
+                        <h3>Stromanbieter -<br>unabhängig</h3>
                         <p>
-                            Die Schlauhaus-Box ist vollständig individualisierbar, sowohl durch Konfiguration als auch durch Änderungen und Erweiterungen in der Software selbst - bei gleichzeitiger Nutzung von standardisierter und damit kostengünstiger Hard- und Software für die Basis-Funktionen.
+                            Schlauhaus funktioniert mit allen Stromtarifen, ohne dass Sie sich an einen Anbieter binden müssen. Und wir helfen Ihnen, den passenden Tarif zu finden.
                         </p>
                     </div>
                     <div class="col">
-                        <img src="<?php echo theme_path();?>images/Schlauhaus-Wechselrichter.svg" alt="Skalierbarkeit Schlauhaus-Wechselrichter">
-                        <h3>Skalierbarkeit</h3>
+                        <img src="<?php echo theme_path();?>images/Schlauhaus-Wechselrichter.svg" alt="Skalierbarkeit Schlauhaus-Wechselrichter" class="img-fluid">
+                        <h3>Individueller Service -<br>auch vor Ort</h3>
                         <p>
-                            Durch die Architektur der Basis-Software und Weiterentwicklungen des Schlauhaus-Teams kann das System einfach skaliert werden - sowohl für zahlreiche Einzelkunden aber auch für Kunden mit Immobilien und Anlagen an mehreren Standorten.
+                            Schlauhaus richtet das Energiemanagement ganz nach Ihren Bedürfnissen ein - und wenn die sich ändern, dann programmieren wir neu.  Wenn es aus der Ferne nicht geht, dann kommen wir auch in Ihren Keller.
                         </p>
                     </div>
                     <div class="col">
-                        <h3>Digitale Souveränität</h3>
+                        <img src="<?php echo theme_path();?>images/Schlauhaus-Schlauhaus-Box.svg" alt="Individualisierbarkeit Schlauhaus-Box" class="img-fluid">
+                        <h3>Daten lokal -<br>nicht in der Cloud</h3>
                         <p>
-                            Erfahren Sie hier mehr über die Möglichkeiten für Ihr ganz persönliches <a href="<?php echo site_url();?>category/blog" class="link-underline">Schlauhaus</a>.
+                            Schlauhaus speichert und verarbeitet Ihre Daten auf einem Mini-Computer in ihrem Haus - und nicht in einem Rechenzentrum.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <img src="<?php echo theme_path();?>images/Schlauhaus-Hausakku.svg" alt="Hausakku" class="img-fluid">
+                        <h3>Mathe statt KI</h3>
+                        <p>
+                            Schlauhaus optimiert ihre Stromerzeuger und -verbraucher mit Formeln und Algorithmen, die wir selbst entwickeln und Ihnen zeigen und erklären können.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <img src="<?php echo theme_path();?>images/Schlauhaus-Klimaanlage.svg" alt="Referenzen - Schlauhaus-Box - Klimaanlage" class="img-fluid">
+                        <h3>Referenzen</h3>
+                        <p>
+                            Erfahren Sie hier mehr über die Möglichkeiten für Ihr ganz persönliches <a href="<?php echo site_url();?>category/referenzen" class="link-underline">Schlauhaus</a>.
                         </p>
                     </div>
                 </section>
