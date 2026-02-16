@@ -4806,7 +4806,6 @@ post('/'. permalink_type() .'/:name/delete', function () {
 
 // Show various page (top-level), admin, login, sitemap, static page.
 get('/:static', function ($static) {
-
     if (strpos($static, ".xml") !== false) {
         if ($static === 'sitemap.xml') {
             $sitemap = 'index.xml';
@@ -4945,7 +4944,6 @@ get('/:static', function ($static) {
         header("location: $redir", TRUE, 301);
 
     } else {
-
         $pages = '';
         if (config("views.counter") != "true") {
             if (!login()) {
@@ -5004,6 +5002,11 @@ get('/:static', function ($static) {
             $pview = 'static';
         }
 
+        $authors = null;
+        if($static === 'kontakt') {
+            $authors = get_author('all');
+        }
+
         render($pview, array(
             'title' => generate_title('is_page', $post),
             'description' => $post->description,
@@ -5016,7 +5019,8 @@ get('/:static', function ($static) {
             'type' => 'is_page',
             'prev' => static_prev($prev),
             'next' => static_next($next),
-            'is_page' => true
+            'is_page' => true,
+            'authors' => $authors
         ), $layout);
     }
 });

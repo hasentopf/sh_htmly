@@ -549,8 +549,12 @@ hr {
   }
 
   &.author-header {
-    flex-direction: row;
     align-items: center;
+    flex-direction: row;
+
+    @include media-query(mobile) {
+      flex-direction: column;
+    }
 
     .author-profile-image {
       z-index: 10;
@@ -562,10 +566,22 @@ hr {
       background: $whitegrey;
       border-radius: 100%;
       object-fit: cover;
+
+      @include media-query(mobile) {
+        margin-top: 40px;
+      }
     }
 
     .author-header-content {
       margin: 5px 0 0 30px;
+
+      @include media-query(mobile) {
+        margin: 0;
+
+        h2 {
+          margin: 0.5em 0;
+        }
+      }
     }
 
     .author-meta {
@@ -1186,6 +1202,15 @@ hr {
     li {
       margin: 5px;
     }
+  }
+
+  .site-header-background {
+    &::after {
+      height: 25px;
+    }
+  }
+  .site-header-content.author-header {
+    padding: 0 3vw 3vw;
   }
 }
 

@@ -1217,7 +1217,7 @@ function get_author($name)
             $str = explode('/', $dirname);
             $profile = $str[1];
 
-            if ($name === $profile) {
+            if ($name === 'all' || $name === $profile) {
                 // Profile URL
                 $filename = $v['dirname'] . '/' . $v['basename'];
                 

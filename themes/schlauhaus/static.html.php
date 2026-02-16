@@ -9,12 +9,27 @@
 		<div class="post-content">
 		<?php echo $p->body;?>
 		</div>
-	</section>
-    <?php if (isset($is_front)):?>
-        <nav>
-            <?php echo menu('is_front');?>
-        </nav>
+    <?php if (isset($authors)):?>
+        <h2>Gesellschafter</h2>
+        <?php foreach($authors as $author):?>
+        <div class="site-header-background">
+            <div class="site-header-content author-header">
+                <img class="author-profile-image" src="<?php echo $author->avatar;?>" alt="<?php echo $author->name;?>">
+                <div class="author-header-content">
+                    <h2><?php echo $author->name;?></h2>
+                    <div class="author-bio"><?php echo $author->about;?></div>
+                </div>
+            </div>
+        </div>
+        <?php endforeach;?>
     <?php endif;?>
+	</section>
+<?php if (isset($is_front)):?>
+    <nav>
+        <?php echo menu('is_front');?>
+    </nav>
+<?php endif;?>
+
 </article>
 
 <?php if (!empty($prev) || !empty($next)): ?>
