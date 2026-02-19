@@ -5003,7 +5003,7 @@ get('/:static', function ($static) {
         }
 
         $authors = null;
-        if($static === 'kontakt') {
+        if($static === 'kontakt' || $static === 'team') {
             $authors = get_author('all');
         }
 

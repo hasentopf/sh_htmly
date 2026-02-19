@@ -850,7 +850,7 @@ hr {
   color: $white;
 
   @include media-query(tablet) {
-    margin-right: 20px;
+    margin-right: 10px;
   }
 
   img {

@@ -722,7 +722,7 @@ hr + p {
 }
 @media (max-width: 700px) {
   .site-nav-logo {
-    margin-right: 20px;
+    margin-right: 10px;
   }
 }
 .site-nav-logo img {
