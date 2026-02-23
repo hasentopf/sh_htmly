@@ -65,6 +65,10 @@ $zindex-header: 100;
   opacity: 0.8;
   transition: all 0.3s ease-in-out;
 
+  @include media-query(tablet) {
+    opacity: 1;
+  }
+
   &:hover {
     opacity: 1;
     color: $color;
@@ -761,6 +765,7 @@ hr {
 
 .site-footer-nav .nav {
   list-style: none;
+  padding: 0;
 
   .nav-item {
     display: inline-block;
@@ -902,6 +907,7 @@ hr {
       .nav-link {
         padding-left: 5px;
         padding-right: 5px;
+        letter-spacing: -5%;
       }
       &.first {
         display: none;
@@ -1109,7 +1115,7 @@ hr {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.3rem
+    font-size: 13px;
   }
 
   .site-footer-nav {
@@ -1117,6 +1123,14 @@ hr {
       a {
         padding: 12px;
         @include linkAnimation($yellow);
+
+        @include media-query(tablet) {
+          padding: 5px 10px;
+
+          &:first-of-type {
+            padding-left: 0;
+          }
+        }
       }
     }
   }
