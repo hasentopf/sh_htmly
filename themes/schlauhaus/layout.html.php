@@ -5,6 +5,7 @@
     <?php echo head_contents();?>
     <?php echo $metatags;?>
     <link rel="stylesheet" type="text/css" href="<?php echo theme_path();?>css/style.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo site_url();?>system/resources/css/social-logos.css">
 </head>
 <?php if (isset($is_front)) {?>
 <body class="home-template">
@@ -196,6 +197,9 @@
 					<?php echo menu(null, 'default');?>
 				</nav>
 			</div>
+            <div class="social-links">
+                <?php echo social('footer');?>
+            </div>
 		</footer>
 <?php if (facebook()) { echo facebook(); } ?>
 <?php if (analytics()): ?><?php echo analytics() ?><?php endif; ?>

@@ -2517,7 +2517,7 @@ function social($class = null)
     $social = '';
 
     $social .= '<div class="social-logo ' . $class . '">';
-    $social .= '<link rel="stylesheet" id="social-logo-style" href="'. site_url() .'system/resources/css/social-logos.css" type="text/css" media="all">';
+    //$social .= '<link rel="stylesheet" id="social-logo-style" href="'. site_url() .'system/resources/css/social-logos.css" type="text/css" media="all">';
     if (!empty($bluesky)) {
         $social .= '<a class="social-logo-bluesky" href="' . $bluesky . '" target="_blank" rel="nofollow"><span class="screen-reader-text">Bluesky</span></a>';
     }

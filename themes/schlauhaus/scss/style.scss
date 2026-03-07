@@ -766,6 +766,7 @@ hr {
 .site-footer-nav .nav {
   list-style: none;
   padding: 0;
+  margin: 0;
 
   .nav-item {
     display: inline-block;
@@ -1008,13 +1009,19 @@ hr {
       color: $yellow;
     }
   }
+
+
+  .site-footer & {
+    .social-logo.footer {
+      margin: 0 auto;
+
+      @include media-query(tablet) {
+        margin: 0;
+      }
+    }
+  }
 }
 
-.social-link {
-  display: inline-block;
-  margin: 0;
-  padding: 10px;
-}
 
 // Subscribe button
 .subscribe-button {

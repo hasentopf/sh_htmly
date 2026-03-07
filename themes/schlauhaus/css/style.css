@@ -626,6 +626,7 @@ hr + p {
 .site-footer-nav .nav {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 .site-footer-nav .nav .nav-item {
   display: inline-block;
@@ -869,11 +870,13 @@ hr + p {
   opacity: 1;
   color: rgb(255, 255, 122);
 }
-
-.social-link {
-  display: inline-block;
-  margin: 0;
-  padding: 10px;
+.site-footer .social-links .social-logo.footer {
+  margin: 0 auto;
+}
+@media (max-width: 700px) {
+  .site-footer .social-links .social-logo.footer {
+    margin: 0;
+  }
 }
 
 .subscribe-button {
