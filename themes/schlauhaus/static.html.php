@@ -10,7 +10,7 @@
 		<?php echo $p->body;?>
 		</div>
     <?php if (isset($authors)):?>
-        <h2>Team</h2>
+        <h2>Das Team</h2>
         <?php foreach($authors as $author):?>
         <div class="site-header-background">
             <div class="site-header-content author-header">
@@ -25,7 +25,7 @@
     <?php endif;?>
 	</section>
 <?php if (isset($is_front)):?>
-    <nav>
+    <nav id="Angebot">
         <?php echo menu('is_front');?>
     </nav>
 <?php endif;?>

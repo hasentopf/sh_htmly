@@ -283,10 +283,14 @@ img {
 }
 
 // Fluid images for consistent sizing
+img[src$='#img-thumbnail'],
 .img-fluid {
   width: 120px;
   height: 120px;
   object-fit: contain;
+}
+img[src$='#img-thumbnail'] {
+  float: right;
 }
 
 // Lists

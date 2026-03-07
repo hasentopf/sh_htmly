@@ -9,4 +9,12 @@
         a.textContent = address;
         placeholder.parentNode.replaceChild(a, placeholder);
     }
+
+    var AngebotAnker = document.querySelector('a[href="#Angebot"]');
+    var Angebot = document.getElementById('Angebot');
+    if (typeof(AngebotAnker) !== 'undefined' && typeof(Angebot) !== 'undefined' && Angebot !== null) {
+        AngebotAnker.replaceWith(Angebot);
+    }
+
+
 })();
