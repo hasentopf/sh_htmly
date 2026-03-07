@@ -10,7 +10,7 @@
 		<?php echo $p->body;?>
 		</div>
     <?php if (isset($authors)):?>
-        <h2>Gesellschafter</h2>
+        <h2>Team</h2>
         <?php foreach($authors as $author):?>
         <div class="site-header-background">
             <div class="site-header-content author-header">
