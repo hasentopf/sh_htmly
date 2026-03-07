@@ -3631,7 +3631,12 @@ function head_contents()
     }
     $favicon = config('favicon.image');
     if (empty($favicon)) {
-        $favicon = '<link rel="icon" type="image/png" href="' . site_url() . 'favicon.png" />' . "\n";
+        $favicon = '<link rel="icon" type="image/png" href="/favicon.png" />' . "\n";
+        $favicon .= '<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />' . "\n";
+        $favicon .= '<link rel="icon" type="image/svg+xml" href="/favicon.svg" />' . "\n";
+        $favicon .= '<link rel="shortcut icon" type="image/svg+xml" href="/favicon.ico" />' . "\n";
+        $favicon .= '<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />' . "\n";
+        $favicon .= '<link rel="manifest" href="/site.webmanifest" />' . "\n";
     } else {
         $favicon = '<link rel="icon" type="image/'. pathinfo($favicon, PATHINFO_EXTENSION) .'" href="' . $favicon . '" />' . "\n";
     }
