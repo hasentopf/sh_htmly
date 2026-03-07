@@ -3631,22 +3631,22 @@ function head_contents()
     }
     $favicon = config('favicon.image');
     if (empty($favicon)) {
-        $favicon = '<link rel="icon" type="image/png" href="/favicon.png" />' . "\n";
-        $favicon .= '<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />' . "\n";
-        $favicon .= '<link rel="icon" type="image/svg+xml" href="/favicon.svg" />' . "\n";
-        $favicon .= '<link rel="shortcut icon" type="image/svg+xml" href="/favicon.ico" />' . "\n";
-        $favicon .= '<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />' . "\n";
-        $favicon .= '<link rel="manifest" href="/site.webmanifest" />' . "\n";
+        $favicon = '<link rel="icon" type="image/png" href="/favicon.png">' . "\n";
+        $favicon .= '<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">' . "\n";
+        $favicon .= '<link rel="icon" type="image/svg+xml" href="/favicon.svg">' . "\n";
+        $favicon .= '<link rel="shortcut icon" type="image/svg+xml" href="/favicon.ico">' . "\n";
+        $favicon .= '<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">' . "\n";
+        $favicon .= '<link rel="manifest" href="/site.webmanifest">' . "\n";
     } else {
-        $favicon = '<link rel="icon" type="image/'. pathinfo($favicon, PATHINFO_EXTENSION) .'" href="' . $favicon . '" />' . "\n";
+        $favicon = '<link rel="icon" type="image/'. pathinfo($favicon, PATHINFO_EXTENSION) .'" href="' . $favicon . '">' . "\n";
     }
     $output .= '<meta charset="utf-8" />' . "\n";
     $output .= '<meta http-equiv="X-UA-Compatible" content="IE=edge" />' . "\n";
     $output .= '<meta name="viewport" content="width=device-width, initial-scale=1" />' . "\n";   
     $output .= '<meta name="generator" content="' . $version . '" />' . "\n";
     $output .= $favicon;
-    $output .= '<link rel="sitemap" href="' . site_url() . 'sitemap.xml" />' . "\n";
-    $output .= '<link rel="alternate" type="application/rss+xml" title="' . safe_html(blog_title()) . ' Feed" href="' . site_url() . 'feed/rss" />' . "\n";
+    $output .= '<link rel="sitemap" type="application/xml" title="Sitemap" href="' . site_url() . 'sitemap.xml">' . "\n";
+    $output .= '<link rel="alternate" type="application/rss+xml" title="' . safe_html(blog_title()) . ' Feed" href="' . site_url() . 'feed/rss">' . "\n";
     if (!empty($google_wmt_id)) {
         $output .=  '<meta name="google-site-verification" content="' . $google_wmt_id . '" />' . "\n";
     }

@@ -192,7 +192,7 @@
 
 		<footer class="site-footer outer">
 			<div class="site-footer-content inner">
-            <section class="copyright">© <?php echo date('Y');?> <?php echo copyright();?></section>
+                <div class="copyright">© <?php echo date('Y');?> <?php echo copyright();?></div>
 				<nav class="site-footer-nav">
 					<?php echo menu(null, 'default');?>
 				</nav>
