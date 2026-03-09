@@ -772,8 +772,8 @@ hr + p {
 .site-nav-right .nav a::before {
   display: none;
 }
-.site-nav-right .nav li:last-of-type a {
-  margin-right: -12px;
+.site-nav-right .nav li.item.nav-item.last {
+  display: none;
 }
 .site-nav-right .subscribe-button {
   margin-left: 24px;

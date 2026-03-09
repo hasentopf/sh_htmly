@@ -896,8 +896,8 @@ hr {
       }
     }
     
-    li:last-of-type a {
-      margin-right: -12px;
+    li.item.nav-item.last {
+      display: none;
     }
   }
   
